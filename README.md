@@ -7,4 +7,4 @@ The start button creates a new MediaRecorder object which begins recording 5-sec
 When stop is pressed, the webm audio file is sent to a WebWorker to convert it to an mp3 using the lamejs library, which is then set as the source of the audio player and link for the download button.
 
 ## Screenshots
-![Screenshot 2025-01-08 at 2 55 28 PM](https://github.com/user-attachments/assets/246ce25e-5d26-43c1-abb8-2bebbaa8df9f) ![IMG_3080](https://github.com/user-attachments/assets/bb098d8e-6b56-405f-bcc0-fd846975fd7c)
+![IMG_3080](https://github.com/user-attachments/assets/38d88b1e-a997-450f-b6a8-4017921a6bd6) ![Screenshot 2025-01-08 at 2 55 28 PM](https://github.com/user-attachments/assets/e88ea6b1-4d62-400b-baf4-a0a8ea8a0eb1)
