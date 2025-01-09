@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(20, 20, 20);
+    color: #e4e4e4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    background-image: url('images/background.webp');
+    opacity: 0.3;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+#custom-audio-player {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 4px 0;
+}
+
+#playPauseButton {
+    font-size: 25pt;
+    background: transparent;
+    padding: 0;
+    margin: 0 4px;
+}
+
+#currentTime, #duration {
+    font-size: 14px;
+    color: white;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    border-radius: 22px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.elapsed-time {
+    font-family: 'Digital-7', sans-serif;
+    font-size: 34pt;
+    text-shadow: 0px 0px 4px;
+    color: #EE4D3F;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+button:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+.slider-container {
+    margin: 10px 0;
+}
+
+input[type="range"] {
+    border-radius: 8px;
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+}
+
+.slider-container input[type="range"] {
+    appearance: none;
+    background: linear-gradient(90deg, #ff6f61 0%, #ffffff 0%);
+    width: 100%;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb  {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ff6f61;
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    text-decoration: none;
+    background: rgb(75 76 167);
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;   
+}
+
+.download-button:hover {
+    background-color: rgb(96, 98, 201);
+}
+
+.download-button:active {
+    background-color: rgb(75 76 167);
+}
+
+#start {
+    background: rgb(0, 174, 14);
+}
+
+#start:hover {
+    background: rgb(0, 203, 17);
+}
+
+#start:active {
+    background: rgb(0, 174, 14);
+}
+
+#start.recording {
+    background: rgba(255, 0, 0, 0.5);
+    animation: glowing 750ms infinite alternate ease-in-out;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 4px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 12px rgba(255, 0, 0, 1);
+    }
+}
+
+@font-face {
+    font-family: 'Digital-7';
+    src: url('fonts/digital-7.ttf') format('truetype');
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 18pt;
+    }
+
+    .container {
+        max-width: 80%;
+    }
+
+    .elapsed-time {
+        font-size: 26pt;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

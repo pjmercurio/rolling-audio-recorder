@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <title>Rolling Audio Recorder</title>
+  <script src="scripts/script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- <h1>Rolling Audio Recorder</h1> -->
+    <div class="slider-container">
+      <input type="range" id="bufferTime" min="1" max="20" step="1" value="5">
+    </div>
+    <div class="elapsed-time">
+        <span id="elapsedTime">0:00</span> / <span id="maxTime">5:00</span>
+    </div>
+    <button id="start">Start Recording</button>
+    <button id="stop" disabled>Stop & Save</button>
+    <div id="custom-audio-player">
+        <button id="playPauseButton">▶️</button>
+        <input type="range" id="progressBar" min="0" value="0">
+        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+      </div>
+      <audio id="audioElement" src=""></audio>
+    <a id="downloadLink" class="download-button" href="#" download="recording.webm" style="display: none;">Download!</a>
+  </div>
+</body>
+</html>
